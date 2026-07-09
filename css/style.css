@@ -693,6 +693,8 @@ button:focus-visible,
    CONTACT PAGE
    ========================================================================== */
 .contact-hero { background: var(--navy); color: #fff; }
+.contact-hero h1 { color: #fff; }
+.contact-hero .lead { color: #e9eff6; }
 .contact-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; margin-top: 2rem; }
 .contact-card {
   background: rgba(255,255,255,0.06);
