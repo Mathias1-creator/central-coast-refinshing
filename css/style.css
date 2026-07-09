@@ -670,6 +670,42 @@ button:focus-visible,
 .flow-list p { margin: 0; color: var(--steel); }
 
 /* ==========================================================================
+   FAQ ACCORDION
+   ========================================================================== */
+.faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.9rem; }
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--navy-line);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 1.15rem 1.4rem;
+  font-weight: 700;
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--red);
+  flex: none;
+  transition: transform 0.2s var(--ease);
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item summary:focus-visible { outline: 3px solid var(--red); outline-offset: -3px; border-radius: 6px; }
+.faq-item p { padding: 0 1.4rem 1.2rem; margin: 0; color: var(--steel); }
+
+/* ==========================================================================
    CTA BAND
    ========================================================================== */
 .cta-band { background: var(--navy); color: #fff; text-align: center; position: relative; overflow: hidden; }
