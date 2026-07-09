@@ -1,0 +1,5 @@
+# Local working files — not part of the deployed site
+scratch/
+.DS_Store
+Thumbs.db
+*.log
