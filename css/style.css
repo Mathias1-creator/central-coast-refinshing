@@ -33,7 +33,7 @@
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-  --header-h: 78px;
+  --header-h: 90px;
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
@@ -177,6 +177,44 @@ button:focus-visible,
 .header a:focus-visible { outline-color: #f0b8b2; }
 
 /* ==========================================================================
+   TOP BAR — phone number + free estimates, visible above the fold
+   ========================================================================== */
+.topbar { background: var(--navy); border-bottom: 1px solid rgba(255,255,255,0.08); }
+.topbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  padding: 0.55rem 22px;
+}
+.topbar__phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+.topbar__phone svg { width: 1.05em; height: 1.05em; color: var(--red); flex: none; }
+.topbar__phone:hover { color: #e9b8b2; text-decoration: none; }
+.topbar__divider { width: 1px; height: 14px; background: rgba(255,255,255,0.25); flex: none; }
+.topbar__estimate {
+  color: #e9b8b2;
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .topbar__inner { gap: 0.55rem; padding: 0.5rem 16px; }
+  .topbar__phone { font-size: 0.88rem; }
+  .topbar__estimate { font-size: 0.68rem; }
+}
+
+/* ==========================================================================
    HEADER
    ========================================================================== */
 .header {
@@ -198,12 +236,12 @@ button:focus-visible,
   transition: height 0.25s var(--ease);
 }
 .header.scrolled { background: var(--navy); }
-.header.scrolled .header__inner { height: 62px; }
+.header.scrolled .header__inner { height: 72px; }
 
-.brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; }
+.brand { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; }
 .brand:hover { text-decoration: none; }
 .brand__logo {
-  width: 46px; height: 46px;
+  width: 58px; height: 58px;
   border-radius: 50%;
   flex: none;
   transition: width 0.25s var(--ease), height 0.25s var(--ease);
@@ -211,12 +249,12 @@ button:focus-visible,
   padding: 2px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.25);
 }
-.header.scrolled .brand__logo { width: 40px; height: 40px; }
+.header.scrolled .brand__logo { width: 46px; height: 46px; }
 .brand__name {
   font-family: var(--font-display);
   color: #fff;
   font-weight: 800;
-  font-size: 1.02rem;
+  font-size: 1.32rem;
   letter-spacing: 0.02em;
   line-height: 1.05;
   text-transform: uppercase;
